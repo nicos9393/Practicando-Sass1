@@ -1,0 +1,344 @@
+@charset "UTF-8";
+* {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+}
+
+header {
+  background-color: #023e8a;
+  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "titulo . nav" "titulo . .";
+  -ms-grid-columns: 300px auto 200px;
+      grid-template-columns: 300px auto 200px;
+  /* grid-template-rows: 150px auto 200; */
+}
+
+.titulo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-animation-name: color;
+          animation-name: color;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.titulo:hover {
+  -webkit-transform: scale(2, 1);
+          transform: scale(2, 1);
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+header nav ul {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 20px;
+}
+
+#header_responsive {
+  display: none;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.blockNav li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.blockNav li:hover {
+  color: #bbb;
+}
+
+.blockNav li:hover > a {
+  color: #bbb;
+}
+
+.blockNav ul li i {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: right;
+}
+
+.contendor {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "";
+  background-color: #023e8a;
+}
+
+.contendor__lq {
+  background-color: #0096c7;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    display: none;
+  }
+  #header_responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.paquetes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 30px;
+  border: solid 1px #34BBCF;
+  margin: 50px;
+  padding: 10px;
+}
+
+.paquetes__img {
+  border: solid black 2px;
+  width: 20%;
+  height: 20%;
+  border-radius: 20px;
+}
+
+.paquetes__img--bot {
+  width: 30%;
+  height: 30%;
+  border-radius: 20px;
+}
+
+.paquetes__h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.paquetes__h3:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.paquetes__h4 {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  justify-items: center;
+}
+
+.paquetes__p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.paquetes__pagina_contacto {
+  border: solid #34BBCF 2px;
+  border-radius: 30px;
+  padding: 10%;
+  text-align: center;
+}
+
+.form__input {
+  color: black;
+}
+
+.Enviar {
+  color: black;
+}
+
+#comentario {
+  display: block;
+}
+
+/*Diseño pagina sobre nostotros*/
+.somos {
+  margin: 35px 20px;
+}
+
+.responsiveMain {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .noresponiveMine {
+    display: none;
+  }
+  .contenedor__lq {
+    display: none;
+  }
+  .paquetes {
+    display: none;
+    max-width: 20%;
+    max-height: 20%;
+  }
+  /* PAQUEATES RESPONSIVOS     */
+  .responsiveMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contenedor__lq--responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #0096c7;
+    border-radius: 20px;
+    padding: 10px;
+  }
+}
+
+.paquetes--responsive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 30px;
+  border: solid 1px #34BBCF;
+  /* }fin @media */
+}
+
+@-webkit-keyframes color {
+  0% {
+    color: #F6F2D4;
+  }
+  5% {
+    color: #95D1CC;
+  }
+  25% {
+    color: #84DFFF;
+  }
+  50% {
+    color: #CDF0EA;
+  }
+  75% {
+    color: #F7DBF0;
+  }
+  100% {
+    color: #BEAEE2;
+  }
+}
+
+@keyframes color {
+  0% {
+    color: #F6F2D4;
+  }
+  5% {
+    color: #95D1CC;
+  }
+  25% {
+    color: #84DFFF;
+  }
+  50% {
+    color: #CDF0EA;
+  }
+  75% {
+    color: #F7DBF0;
+  }
+  100% {
+    color: #BEAEE2;
+  }
+}
+
+.navbar {
+  background-color: #1081f3 !important;
+  border-radius: 25px;
+  width: auto;
+  padding: 0;
+}
+
+.navbar-brand {
+  font-size: 40px;
+  -webkit-animation-name: color;
+          animation-name: color;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.navbar-brand:hover {
+  -webkit-transform: scale(2, 1);
+          transform: scale(2, 1);
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.nav-link {
+  color: whitesmoke !important;
+  font-size: 20px;
+}
+/*# sourceMappingURL=Style.css.map */

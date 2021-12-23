@@ -1,0 +1,127 @@
+* {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2%;
+    position: relative;
+    box-sizing: border-box;}
+    
+    body{
+        background-color: #1a1a1a;
+    }
+    header {
+        background-color: #023e8a;
+        border-radius: 20px;
+        display: grid;
+        grid-template-areas: 
+        "titulo . nav"
+        "titulo . .";
+        grid-template-columns: 300px auto 200px;
+        /* grid-template-rows: 150px auto 200; */
+        
+        
+    }
+  
+    
+        
+    header nav ul {  
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+    #header_responsive{
+        display: none;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+       order: 1;
+       
+       
+    }
+       
+    .blockNav ul li i{
+        box-sizing: border-box;
+        text-align: right;
+    }
+   
+        
+    @media only screen and (max-width: 700px){
+        header{
+            display: none;
+            
+        }
+        #header_responsive {
+            display: flex;
+            flex-direction: column;
+        }
+     
+        
+        
+        }
+              
+        #comentario{
+            display: block;
+        }
+        /*Diseño pagina sobre nostotros*/
+        .somos{
+            margin: 35px 20px ;
+        } 
+        .responsiveMain{
+            display: none;
+        }
+        @media only screen and (max-width: 1000px){
+            .noresponiveMine{
+                display: none;
+            }
+            .contenedor__lq{
+                display: none;
+            }
+            .paquetes{display: none;
+            max-width: 20%;
+            max-height: 20%;
+        }
+        
+            /* PAQUEATES RESPONSIVOS     */
+            .responsiveMain{display: flex;
+            flex-direction: column;}
+            .contenedor__lq--responsive{
+                display: flex;
+                flex-direction: column;
+                background-color: #0096c7;
+                border-radius: 20px;
+                padding: 10px;    
+                }
+            }
+            .paquetes--responsive{
+                display: flex;
+                flex-direction: column;
+                border-radius: 30px;
+        border: solid 1px #34BBCF;
+            /* }fin @media */}
+            
+    
+        @keyframes color{
+            0%{color: #F6F2D4;}
+            5%{color: #95D1CC;}
+            25%{color:#84DFFF;}
+            50%{color: #CDF0EA;}
+            75%{color: #F7DBF0 ;}
+            100%{color: #BEAEE2;}}
+
+          
+          .navbar {
+            background-color: #1081f3!important;
+            border-radius: 25px;
+            width: auto;
+            padding: 0;
+            
+        }
+        .navbar-brand{
+            font-size: 40px;
+            animation-name: color;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+     
