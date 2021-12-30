@@ -36,8 +36,24 @@
                }            
     }
     
+        $black: #1a1a1a;
+        $azul: #023e8a;
+        $azulc: #0096c7;
+     $coloresbackground:(
+         Negro: #1a1a1a,
+         contenido: #023e8a,
+         subcontenido: #0096c7,
+     );   
     
-        
+
+@each $valor, $color in $coloresbackground {
+  .fondo--#{$valor } {
+    background-color: $color;
+    border-radius: 20px;
+  }
+}
+
+
     header nav ul {  
         grid-area: nav;
         display: flex;
@@ -47,6 +63,7 @@
     #header_responsive{
         display: none;
     }
+    
     nav {
         display: flex;
         flex-direction: row;
@@ -76,9 +93,9 @@
         display: grid;
         grid-template-areas: 
         "";
-        background-color: #023e8a;
+        // background-color: #023e8a;
         &__lq{
-            background-color: #0096c7;
+            // background-color: #0096c7;
             border-radius: 20px;
             padding: 10px;    
         }
@@ -100,6 +117,11 @@
     $borderR30: 30px;
     $negro: black ;
 
+    @mixin tamanios ($ancho, $alto) {
+        width: $ancho;
+        height: $alto;}
+        
+    
     .paquetes { 
         display: flex;
         flex-direction: row;
@@ -109,13 +131,16 @@
         padding: 10px;
         &__img{
             border:  solid $negro 2px;
-            width: 20%;
-            height: 20%;
+            @include tamanios(20%, 20% );
+            // width: 20%;
+            // height: 20%;
             border-radius: 20px;
                 &--bot{ 
-                    width: 30%;
-                    height: 30%;
-                    border-radius: 20px;
+                    @extend .paquetes__img;
+                    @include tamanios(30%,30%);
+                    // width: 30%;
+                    // height: 30%;
+                    
                 }
         }
         &__h3{ 
